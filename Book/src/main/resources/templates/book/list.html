@@ -1,0 +1,24 @@
+<body class="book-list">
+<table>
+    <caption>농농이 책꽂이</caption>
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>도서명</th>
+        <th>저자</th>
+        <th>출판사</th>
+        <th>가격</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="book : ${BOOKS}">
+            <td th:text="${bookStat.count}"></td>
+            <td th:text="*{title}">도서명</td>
+            <td th:text="*{author}">저자</td>
+            <td th:text="*{comp}">출판사</td>
+            <td th:text="*{price}">가격</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>

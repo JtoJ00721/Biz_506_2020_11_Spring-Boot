@@ -47,7 +47,8 @@ public class BookServiceImplV1 implements BookService{
         
         // 만약 findById() 를 수행하여 데이터가 없으면
         // 새로운 VO를 만드록 id값을 -1로 세팅하여 리턴하라
-        return vo.orElse(BookVO.builder().id(-1L).build());
+        // return vo.orElse(BookVO.builder().id(-1L).build());
+        return vo.get();
     }
 
     @Override

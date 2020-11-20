@@ -36,10 +36,13 @@ public class HolloController {
 		return "home";
 	}
 
-	@ResponseBody
-	@RequestMapping(value = "/list", method=RequestMethod.GET)
-	public List<BookVO> getList(){
-		List<BookVO> bookList = bService.selectAll();
-		return bookList;
+	@RequestMapping(value = "/car", method = RequestMethod.GET)
+	public String car(Model model) {
+
+		BookVO bookVO = BookVO.builder().title("조선 민족 전래동화 농농이").author("쩔쩔이").comp("스팀???").build();
+
+		return "book/list_ex";
 	}
+
+
 }
