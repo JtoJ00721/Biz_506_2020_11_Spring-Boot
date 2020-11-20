@@ -30,6 +30,8 @@ public class BookVO {
 
     @Column(length = 1000)
     private String comp;
+
+    @Column(nullable = true)
     private int price;
     
 }

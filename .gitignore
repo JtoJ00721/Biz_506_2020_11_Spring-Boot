@@ -12,6 +12,7 @@
 hs_err_pid*
 
 .metadata
+Servers/
 bin/
 tmp/
 *.tmp
@@ -139,7 +140,3 @@ typings/
 .env
 .metadata/
 RemoteSystemsTempFiles/
-
-# naver API Key
-NaverSecret.*
-
