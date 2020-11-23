@@ -1,8 +1,11 @@
 package com.biz.Book.service;
 
-import com.biz.Book.domain.BookVO;
-
 import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import com.biz.Book.domain.BookVO;
 
 public interface BookService {
 
@@ -12,6 +15,7 @@ public interface BookService {
     public int insert(BookVO bookVO);
     public int update(BookVO bookVO);
     public int delete(Long id);
+	public Page<BookVO> pageSelect(Pageable pageable);
 
 
 

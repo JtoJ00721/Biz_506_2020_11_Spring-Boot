@@ -23,13 +23,13 @@ public class HolloController {
 		this.bService = bService;
 	}
 
-	@ResponseBody
-	@RequestMapping(value = "",method = RequestMethod.GET)
+	// @ResponseBody
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String hello() {
-		return"Hello Spring-boot Web Application";
+		return "home";
 	}
-	
-	@RequestMapping(value = "/home",method = RequestMethod.GET)
+
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(Model model) {
 		model.addAttribute("username", "농농이");
 		model.addAttribute("tel", "010-222-2222");
@@ -43,6 +43,5 @@ public class HolloController {
 
 		return "book/list_ex";
 	}
-
 
 }
